@@ -15,7 +15,7 @@ class Login(unittest.TestCase):
         password.send_keys('shahiq123')
         button = self.driver.find_element_by_css_selector('button[type="submit"]')
         button.click()
-        time.sleep(4)
+        time.sleep(2)
         assert 'https://awesomeblogposts.herokuapp.com/' == self.driver.current_url
     def tearDown(self):
         self.driver.close()
