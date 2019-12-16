@@ -10,9 +10,9 @@ class Login(unittest.TestCase):
     def test_login(self):
         self.driver.get('https://awesomeblogposts.herokuapp.com/login/')
         username = self.driver.find_element_by_css_selector('input[id="id_username"]')
-        username.send_keys('shahiq')
+        username.send_keys('')
         password = self.driver.find_element_by_css_selector('input[id="id_password"]')
-        password.send_keys('shahiq123')
+        password.send_keys('')
         button = self.driver.find_element_by_css_selector('button[type="submit"]')
         button.click()
         time.sleep(2)
