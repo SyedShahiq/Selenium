@@ -9,4 +9,3 @@ class DashboardPage(object):
 
     def check_dashboard_title(self):
         self.wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,'title'),'Dashboard'))
-

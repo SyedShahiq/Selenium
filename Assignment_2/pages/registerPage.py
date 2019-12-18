@@ -45,6 +45,9 @@ class RegisterPage(object):
             time.sleep(3)
             if self.check_error() == "":
                 self.check_email = False
+        username_elem = self.driver.find_element_by_css_selector('#register-username')
+        username = email.split('@')
+        username_elem.send_keys(username[0])
         pwd_elem = self.driver.find_element_by_css_selector('#register-password')
         pwd_elem.send_keys('mehfoozian1R!')
         country = Select(self.driver.find_element_by_css_selector('#register-country'))
