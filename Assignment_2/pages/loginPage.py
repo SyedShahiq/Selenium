@@ -23,7 +23,6 @@ class LoginPage(object):
     def fill_form(self):
         email_elem = self.driver.find_element_by_css_selector('#login-email')
         email_elem.send_keys('.....')
-        #Find and fill the password field
         pwd_elem = self.driver.find_element_by_css_selector('#login-password')
         pwd_elem.send_keys('.....')
 

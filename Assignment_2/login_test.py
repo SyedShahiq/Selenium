@@ -5,11 +5,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from pages.loginPage import LoginPage
-
+from pages.dashboard import DashboardPage
 class Login(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.login = LoginPage(self.driver)
+        self.dashboard = DashboardPage(self.driver)
 
     def test_login(self):
         self.driver.get('http://stage.edx.org/')
@@ -18,6 +19,7 @@ class Login(unittest.TestCase):
         self.assertTrue(self.login.is_browser_on_the_page())
         self.login.fill_form()
         self.login.submit_form()
+        self.assertTrue(self.dashboard.check_dashboard())
 
     def tearDown(self):
         self.driver.close()
