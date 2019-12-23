@@ -20,7 +20,7 @@ class Register(unittest.TestCase):
         self.assertTrue(self.register.is_browser_on_the_page())
         self.register.fill_form()
         self.register.submit_form()
-        self.assertTrue(self.dashboard.check_dashboard_title())
+        self.assertTrue(self.dashboard.check_dashboard())
 
     def tearDown(self):
         self.driver.close()

@@ -7,5 +7,6 @@ class DashboardPage(object):
         self.driver = driver
         self.wait = WebDriverWait(self.driver,15)
 
-    def check_dashboard_title(self):
-        self.wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR,'title'),'Dashboard'))
+    def check_dashboard(self):
+        self.wait.until(EC.text_to_be_present_in_element((By.CLASS_NAME,'header-courses'),'My Courses'))
+        return True

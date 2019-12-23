@@ -33,7 +33,7 @@ class RegisterPage(object):
         while self.check_email == True:
             email_elem = self.driver.find_element_by_css_selector('#register-email')
             if count == 0:
-                email = 'test@mailinator.com'
+                email = 'test_6@mailinator.com'
             else:
                 email = 'test_'+str(count)+'@mailinator.com'
             count+=1
@@ -41,7 +41,7 @@ class RegisterPage(object):
             email_elem.send_keys(email)
             name_elem = self.driver.find_element_by_css_selector('#register-name')
             name_elem.clear()
-            name_elem.send_keys('Syed Shahiq')
+            name_elem.send_keys('TEST TEST')
             time.sleep(3)
             if self.check_error() == "":
                 self.check_email = False
