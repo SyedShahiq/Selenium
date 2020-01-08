@@ -3,6 +3,7 @@ import time
 from .base_page import BasePage
 from selenium.webdriver.support.select import Select
 
+
 class RegisterPage(BasePage):
     def is_browser_on_the_page(self):
         return self.find_elem('button[type="submit"]').is_displayed()
@@ -20,7 +21,7 @@ class RegisterPage(BasePage):
                 email = 'test_6@mailinator.com'
             else:
                 email = 'test_'+str(count)+'@mailinator.com'
-            count+=1
+            count += 1
             email_elem.clear()
             email_elem.send_keys(email)
             name_elem = self.find_elem('#register-name')

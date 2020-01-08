@@ -4,12 +4,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 
+
 class element_has_color(object):
     """An expectation for checking that an element has a particular background color.
 
     locator - used to find the element
     returns the WebElement once it has the particular background color
     """
+
     def __init__(self, locator, background_color):
         self.locator = locator
         self.background_color = background_color
@@ -21,12 +23,14 @@ class element_has_color(object):
         else:
             return False
 
+
 class is_document_ready(object):
     """An expectation for checking that an element has a particular background color.
 
     locator - used to find the element
     returns the WebElement once it has the particular background color
     """
+
     def __call__(self, driver):
         page_status = driver.execute_script("return document.readyState=='complete'")
         # import pdb; pdb.set_trace()
@@ -82,5 +86,3 @@ class BasePage(object):
             return WebDriverWait(self.driver, timeout).until(lambda x: (self.is_browser_on_page(), self))
         except TimeoutException:
             raise TimeoutException(f'Page is not on correct page: {self}')
-
-      

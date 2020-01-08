@@ -1,5 +1,6 @@
 from .base_page import BasePage
 
+
 class CoursesPage(BasePage):
 
     def is_browser_on_page(self):

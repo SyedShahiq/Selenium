@@ -1,11 +1,11 @@
 import unittest
 
+from pages.base_page import BasePage
+from pages.dashboard_page import DashboardPage
+from pages.home_page import HomePage
+from pages.register_page import RegisterPage
 from selenium import webdriver
 
-from pages.register_page import RegisterPage
-from pages.dashboard_page import DashboardPage
-from pages.base_page import BasePage
-from pages.home_page import HomePage
 
 class Register(unittest.TestCase):
     def setUp(self):
@@ -25,6 +25,7 @@ class Register(unittest.TestCase):
 
     def tearDown(self):
         self.driver.close()
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 from .base_page import BasePage
 from .dashboard_page import DashboardPage
 
+
 class LoginPage(BasePage):
 
     def is_browser_on_page(self):
@@ -15,6 +16,4 @@ class LoginPage(BasePage):
     def submit_form(self):
         submit_elem = self.find_elem('button[type="submit"]')
         submit_elem.click()
-        DashboardPage(self.driver).wait_for_page()
-
-
+        return DashboardPage(self.driver).wait_for_page()

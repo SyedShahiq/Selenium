@@ -1,5 +1,6 @@
 from .base_page import BasePage
 
+
 class HomePage(BasePage):
 
     def is_browser_on_the_page(self):
