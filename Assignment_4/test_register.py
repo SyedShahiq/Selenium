@@ -9,7 +9,7 @@ from selenium import webdriver
 
 class Register(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Chrome()
         self.register = RegisterPage(self.driver)
         self.homepage = HomePage(self.driver)
         self.dashboard = DashboardPage(self.driver)

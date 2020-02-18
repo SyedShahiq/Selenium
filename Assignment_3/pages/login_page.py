@@ -1,5 +1,6 @@
 from .base_page import BasePage
 
+
 class LoginPage(BasePage):
 
     def is_browser_on_the_page(self):
@@ -15,5 +16,3 @@ class LoginPage(BasePage):
     def submit_form(self):
         subnit_elem = self.find_elem('button[type="submit"]')
         subnit_elem.click()
-
-

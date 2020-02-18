@@ -22,7 +22,15 @@ class EdxLogin(unittest.TestCase):
         self.driver.get('https://stage.edx.org')
         self.assertTrue(self.homepage.is_browser_on_the_page())
         self.homepage.click_signin()
-        self.login.fill_form('******@yopmail.com', '******')
+        self.login.fill_form('temp_user@yopmail.com', 'edxedxedx1')
+        self.login.submit_form()
+        self.assertTrue(self.dashboard.go_to_courses_page())
+
+    def test_empty_email(self):
+        self.driver.get('https://stage.edx.org')
+        self.assertTrue(self.homepage.is_browser_on_the_page())
+        self.homepage.click_signin()
+        self.login.fill_form('', 'edxedxedx1')
         self.login.submit_form()
         self.assertTrue(self.dashboard.go_to_courses_page())
 
